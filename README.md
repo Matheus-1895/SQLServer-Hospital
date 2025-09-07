@@ -37,7 +37,7 @@ O projeto segue um modelo relacional com as seguintes entidades principais:
 
 ---
 
-##Representação simplificada:
+## Representação simplificada:
 
 Paciente --< Consulta >-- Medico
 Consulta --< Prescricao >-- Medicamento
@@ -46,7 +46,7 @@ Exemplos de Consultas SQL
 
 ---
 
-##1. Listar todos os pacientes com suas consultas e médicos
+## 1. Listar todos os pacientes com suas consultas e médicos
 
 SELECT p.nome AS Paciente, m.nome AS Medico, c.data_consulta
 FROM Consulta c
@@ -55,7 +55,7 @@ JOIN Medico m ON c.id_medico = m.id_medico;
 
 ---
 
-##2. Quantidade de consultas por médico
+## 2. Quantidade de consultas por médico
 
 SELECT m.nome, COUNT(c.id_consulta) AS total_consultas
 FROM Medico m
@@ -64,7 +64,7 @@ GROUP BY m.nome;
 
 ---
 
-##3. Histórico de prescrições de um paciente
+## 3. Histórico de prescrições de um paciente
 
 SELECT p.nome AS Paciente, pr.nome_medicamento, c.data_consulta
 FROM Prescricao pr
@@ -74,26 +74,26 @@ WHERE p.id_paciente = 1;
 
 ---
 
-##**Como Rodar o Projeto**
+## **Como Rodar o Projeto**
 
-###Abra o SQL Server Management Studio (SSMS).
+### Abra o SQL Server Management Studio (SSMS).
 
-###Crie um novo banco de dados:
+### Crie um novo banco de dados:
 
 CREATE DATABASE HospitalDB;
 USE HospitalDB;
 
-###Execute os scripts na seguinte ordem:
+### Execute os scripts na seguinte ordem:
 
 -create_tables.sql
 -insert_data.sql
 -queries.sql (para testar consultas)
 
-###Explore os dados com queries próprias ou usando os exemplos já fornecidos.
+### Explore os dados com queries próprias ou usando os exemplos já fornecidos.
 
 ---
 
-##Melhorias Futuras que irei fazer
+## Melhorias Futuras que irei fazer
 
 -Criar views, stored procedures e triggers.
 -Adicionar tabelas extras como especialidades médicas, salas e agendamentos.
