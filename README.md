@@ -86,7 +86,9 @@ USE HospitalDB;
 ### Execute os scripts na seguinte ordem:
 
 -create_tables.sql
+
 -insert_data.sql
+
 -queries.sql (para testar consultas)
 
 ### Explore os dados com queries próprias ou usando os exemplos já fornecidos.
@@ -96,6 +98,9 @@ USE HospitalDB;
 ## Melhorias Futuras que irei fazer
 
 -Criar views, stored procedures e triggers.
+
 -Adicionar tabelas extras como especialidades médicas, salas e agendamentos.
+
 -Criar relatórios avançados e análises de histórico de pacientes.
+
 -Adicionar um diagrama ER visual no README.
